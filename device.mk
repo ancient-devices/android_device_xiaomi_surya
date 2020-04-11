@@ -190,16 +190,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor-overlay/lib/rfsa/adsp/tas25xx_TI_0.bin:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/rfsa/adsp/tas25xx_TI_0.bin \
     $(LOCAL_PATH)/vendor-overlay/etc/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/wifi/WCNSS_qcom_cfg.ini
 
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
-
-# WiFi
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
 
 # WFD
 PRODUCT_PACKAGES += \
@@ -208,3 +201,17 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+    
+# WiFi
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay \
+    WifiOverlay
+    
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libnl \
+    libqdMetaData \
+    libqdMetaData.system
+
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
