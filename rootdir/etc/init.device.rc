@@ -56,3 +56,7 @@ on property:vendor.post_boot.parsed=1
     rm /data/unencrypted/zram_swap
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 50
+
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
+    setprop dalvik.vm.dex2oat-threads 6
