@@ -1,13 +1,13 @@
 [
     {
         "remote":       "github",
-        "repository":   "mahajant99/vendor_xiaomi_surya",
+        "repository":   "PixysOS-devices/vendor_xiaomi_surya",
         "target_path":  "vendor/xiaomi/surya",
         "branch":     "eleven"
     },
     {
         "remote":       "github",
-        "repository":   "mahajant99/kernel_xiaomi_surya",
+        "repository":   "PixysOS-devices/kernel_xiaomi_surya",
         "target_path":  "kernel/xiaomi/surya",
         "branch":     "eleven"
     },
