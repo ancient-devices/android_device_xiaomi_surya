@@ -52,11 +52,6 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    BluetoothQti \
-    libbtconfigstore
-
 # Camera
 PRODUCT_PACKAGES += \
     Snap
@@ -146,9 +141,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
-    vendor/qcom/opensource/commonsys/system/bt/conf
+    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \
