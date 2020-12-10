@@ -16,3 +16,6 @@ ro.sf.lcd_density=420
 
 #system props for the MM modules
 vendor.mm.enable.qcom_parser=131071983
+
+# Display Feature
+debug.sf.hw=1
