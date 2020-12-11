@@ -6,3 +6,9 @@ on post-fs && property:ro.boot.hwc=India
 
 on post-fs && property:ro.boot.hwc=India_PA
     mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
+    
+on property:vendor.post_boot.parsed=1  
+# Enable ZRAM on boot_complete
+    rm /data/unencrypted/zram_swap
+    swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 50
