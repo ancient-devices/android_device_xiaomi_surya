@@ -71,10 +71,10 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 #FM
-#PRODUCT_PACKAGES += \
-#    FM2 \
-#    libqcomfm_jni \
-#    qcom.fmradio
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
 # fstab
 PRODUCT_COPY_FILES += \
