@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Camera2
 
 # Device Settings
 PRODUCT_PACKAGES += \
