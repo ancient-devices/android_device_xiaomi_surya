@@ -45,12 +45,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-    
-# Recorder
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.audio.fluence.audiorec=true
 
 # Smart fps switching
 PRODUCT_PRODUCT_PROPERTIES += \
