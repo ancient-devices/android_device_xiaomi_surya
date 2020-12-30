@@ -49,10 +49,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Priv-app permission
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
-    
-# Wireless display
-PRODUCT_PRODUCT_PROPERTIES += \
-    debug.sf.enable_hwc_vds=1 \
+
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
