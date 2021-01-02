@@ -50,6 +50,7 @@ on boot && property:ro.product.device=karna
 
 on post-fs && property:ro.product.device=karna
     mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
+    setprop ro.power_profile.override power_profile_karna
     
 on property:vendor.post_boot.parsed=1  
 # Enable ZRAM on boot_complete
