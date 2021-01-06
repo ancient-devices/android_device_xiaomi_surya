@@ -27,20 +27,32 @@
 #
 #
 
-on property:ro.product.device=karna
-    disable nqnfcinfo
-    disable vendor.nfc_hal_service
-    disable nqnfc_1_2_hal_service
-    disable secure_element_hal_service
+on init 
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still  
 
-on boot && property:ro.boot.hwc=India
+on property:ro.boot.hwc=*
+    setprop vendor.boot.hwc ${ro.boot.hwc}   
+
+on property:init.svc.vendor.cnss_diag=running
+    stop vendor.cnss_diag
+
+on property:init.svc.vendor.tcpdump=running
+    stop vendor.tcpdump
+    
+on boot && property:ro.product.device=karna
     stop nqnfcinfo
     stop vendor.nfc_hal_service
     stop nqnfc_1_2_hal_service
     stop secure_element_hal_service
 
-on boot && property:ro.boot.hwc=India_PA
-    stop nqnfcinfo
-    stop vendor.nfc_hal_service
-    stop nqnfc_1_2_hal_service
-    stop secure_element_hal_service
+on post-fs && property:ro.product.device=karna
+    mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
+    
+on property:vendor.post_boot.parsed=1  
+# Enable ZRAM on boot_complete
+    rm /data/unencrypted/zram_swap
+    swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 50
