@@ -1,3 +1,14 @@
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.ab-ota=speed-profile \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=4 \
+    dalvik.vm.image-dex2oat-threads=4
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp.aac_whitelist=false \
@@ -7,3 +18,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.btstack.enable.twsplussho=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     vendor.bluetooth.soc=cherokee
+    
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=420 \
+    debug.sf.hw=1
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.mm.enable.qcom_parser=131071983
+
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q6150-17263-1
