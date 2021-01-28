@@ -21,8 +21,6 @@
     -->
     <integer name="config_fingerprintSensorLocation">3</integer>
 
-    <!-- Smartcharging -->
-    <bool name="config_supportSmartCharging">true</bool> </resources>
     <!-- For Enabling Battery Heath -->
     <bool name="config_supportBatteryHealth">true</bool>
     <!-- Battery Health -->
