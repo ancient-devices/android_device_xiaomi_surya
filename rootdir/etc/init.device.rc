@@ -89,3 +89,12 @@ on property:vendor.post_boot.parsed=1
     # Enable schedutil predicted-load boosting
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl 1
     write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl 1
+
+
+# Smart Charging Huaqin add for control charge by zhangjingzhi at 20180129 start
+on boot
+chown system system /sys/class/power_supply/battery/charging_enabled
+chmod 0666 /sys/class/power_supply/battery/charging_enabled
+chown system system /sys/class/power_supply/battery/input_suspend
+chmod 0666 /sys/class/power_supply/battery/input_suspend
+#Huaqin add for control charge by zhangjingzhi at 20180129 end
