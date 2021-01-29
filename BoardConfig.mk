@@ -100,6 +100,7 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := surya_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+  TARGET_KERNEL_CLANG_VERSION := proton
 endif
 
 # Platform
