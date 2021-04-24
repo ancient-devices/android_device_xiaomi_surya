@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
+# MiuiCamera
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+
 # Inherit from common AncientOS configuration
 TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
