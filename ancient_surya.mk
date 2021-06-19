@@ -29,9 +29,6 @@ $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
-# Pixel Charger
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
